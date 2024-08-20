@@ -7,10 +7,9 @@
     <version>${revision}</version>
   </parent>
 
-  <artifactId>framework</artifactId>
+  <artifactId>macboot-datasource</artifactId>
   <packaging>jar</packaging>
-
-  <name>framework</name>
+ 
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
