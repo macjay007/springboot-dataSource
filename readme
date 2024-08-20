@@ -1,4 +1,4 @@
-springboot DataSource 组件 组件版本注意简单适配就行了 使用的时候可以进行@DB注解进行 数据库切换
+springboot DataSource 组件 maven中组件版本注意简单适配就行了 使用的时候dao层可以进行@DB注解进行 数据库切换
 使用配置如下参考
 spring:
   datasource:
