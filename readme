@@ -1,1 +1,28 @@
-springboot DataSource 组件
+springboot DataSource 组件 组件版本注意简单适配就行了 使用的时候可以进行@DB注解进行 数据库切换
+使用配置如下参考
+spring:
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    primary: db1
+    dbs:
+      db1:
+        jdbcUrl: jdbc:mysql://xxxxx:13308/xxx?useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true&jdbcCompliantTruncation=false&useSSL=false
+        username: root
+        password: qif123.,
+        driverClassName: com.mysql.jdbc.Driver
+      db2:
+        jdbcUrl: jdbc:mysql://xxxxx:11116/xxxx?useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true&jdbcCompliantTruncation=false&useSSL=false
+        username: root
+        password: qif123.,
+        driverClassName: com.mysql.jdbc.Driver
+      taos:
+        url: jdbc:TAOS://xxxxx:6030/dsa5200_ac?charset=UTF-8&timezone=UTC-8
+        username: root
+        password: taosdata
+        driver-class-name: com.taosdata.jdbc.TSDBDriver
+    hikari:
+      maximum-pool-size: 100
+      connection-timeout: 30000
+      idle-timeout: 600000
+      auto-commit: true
+      minimum-idle: 15
